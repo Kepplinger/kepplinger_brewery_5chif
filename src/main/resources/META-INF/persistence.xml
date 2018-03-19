@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="myPU" transaction-type="JTA">
+
+        <class>at.kepplinger.brewery.entity.Storage</class>
+        <class>at.kepplinger.brewery.entity.Brewery</class>
+        <class>at.kepplinger.brewery.entity.Beer</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/keppidb" />
+            <property name="javax.persistence.jdbc.user" value="brewery" />
+            <property name="javax.persistence.jdbc.password" value="passme" />
+
+            <property name="hibernate.show_sql" value="true" />
+            <property name="javax.persistence.schema-generation.database.action"
+                      value="drop-and-create" />
+        </properties>
+
+    </persistence-unit>
+</persistence>
